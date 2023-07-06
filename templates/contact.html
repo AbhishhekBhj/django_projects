@@ -11,7 +11,8 @@
     </h1>
 
 <div class="container ">
-    <form method="post" action="">
+    <form method="POST" action="/contact">
+      {% csrf_token %}
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
             <input type="text" class="form-control" placeholder="Enter your name" id="name" name ="name" aria-describedby="emailHelp">
@@ -28,10 +29,7 @@
           <input type="email" class="form-control" placeholder="Enter your email" id="email" name ="email" aria-describedby="emailHelp">
           <div  class="form-text">Your Privacy is of our utmost priority.</div>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" name="password"  placeholder="Enter your Password">
-        </div>
+       
         <div class="form-group">
             <label for="desc">Queries</label>
             <textarea class="form-control my-2" id="desc" rows="5" name="desc" placeholder="Enter your queries here"></textarea>
